@@ -1,0 +1,32 @@
+digraph EmotionSystem {
+	bgcolor="#0b0b0b" rankdir=LR
+	node [color="#222" fillcolor="#18222b" fontcolor="#f3d98b" fontname=Helvetica fontsize=14 shape=rect style="rounded,filled"]
+	capture [label="Capture Image
+(real-time webcam)"]
+	preproc [label="Frame Preprocessing
+resize • normalize • denoise"]
+	facedet [label="Face Detection
+(DeepFace / MTCNN/RetinaFace)"]
+	cropped [label="Extracted Face (ROI)"]
+	emotion [label="Emotion Classification
+(DeepFace - 7 classes)
+stability smoothing"]
+	mapping [label="Emotion → Playlist
+(mapping logic)"]
+	playback [label="Music Playback
+(local audio files)"]
+	db [label="Song Database
+(files grouped by emotion)"]
+	node [fontcolor="#f3d98b" shape=plaintext]
+	spacer [label=""]
+	capture -> preproc
+	preproc -> facedet
+	facedet -> cropped
+	cropped -> emotion
+	emotion -> mapping
+	mapping -> playback
+	playback -> db [arrowhead=none style=dashed]
+	pretrained [label="Pretrained Backbone
+(DeepFace weights: VGGFace2, AffectNet, FER2013)" fillcolor="#111" fontcolor="#cfcfcf" fontsize=12 shape=note]
+	pretrained -> emotion [style=dotted]
+}

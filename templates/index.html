@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Emotion-Aware Music Recommender</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+    <!-- TITLE -->
+    <header class="app-header">
+        <h1>Emotion-Aware Music Recommender</h1>
+    </header>
+
+    <div class="container">
+
+        <!-- LEFT PANEL -->
+        <div class="panel left-panel">
+            <h2>Live Emotion Detection</h2>
+
+            <div class="video-container">
+                <img id="video-stream" src="/video_feed" alt="Live feed">
+            </div>
+
+            <button id="capture-btn" class="gold-btn">Capture</button>
+            <p id="live-emotion">Emotion: ...</p>
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div class="panel right-panel">
+            <h2>Captured Image</h2>
+
+            <div class="video-container">
+                <img id="captured-image" src="/static/img/placeholder.jpg" alt="Captured">
+            </div>
+
+            <h3 id="captured-emotion">Emotion: ...</h3>
+
+            <audio id="player" controls>
+                <source id="audio-source" src="" type="audio/mpeg">
+            </audio>
+
+            <button id="next-song-btn" class="gold-btn">Next Song</button>
+        </div>
+
+    </div>
+
+    <script src="/static/js/app.js"></script>
+
+</body>
+</html>

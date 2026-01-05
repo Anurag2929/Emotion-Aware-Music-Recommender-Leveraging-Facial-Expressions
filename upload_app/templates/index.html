@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Image Emotion Recognition</title>
+</head>
+
+<body>
+
+<h1>Upload Image Emotion Recognition</h1>
+
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <button type="submit">Upload & Predict</button>
+</form>
+
+{% if emotion %}
+    <h2>{{ emotion }}</h2>
+{% endif %}
+
+{% if img_path %}
+    <img src="{{ img_path }}" width="350">
+{% endif %}
+
+</body>
+</html>
