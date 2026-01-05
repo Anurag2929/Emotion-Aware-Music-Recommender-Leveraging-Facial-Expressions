@@ -11,7 +11,7 @@ This work was developed as part of my **final year B.Tech Computer Science capst
 ## 🎥 Project Demo Video
 
 👉 Watch the demo here:  
-**[Add your video link here]**
+https://drive.google.com/file/d/1e3ha7vD4nAVuSQq8HeKaJvukw8SmN1Gh/view?usp=sharing
 
 ---
 
